@@ -32,6 +32,8 @@ jobs:
           az acr login --name rycontainers
           docker tag gc-tiger-bot:${{ github.sha }} rycontainers.azurecr.io/gc-tiger-bot:${{ github.sha }}
           docker push rycontainers.azurecr.io/gc-tiger-bot:${{ github.sha }}
+          docker tag gc-tiger-bot:${{ github.sha }} rycontainers.azurecr.io/gc-tiger-bot:latest
+          docker push rycontainers.azurecr.io/gc-tiger-bot:latest
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
