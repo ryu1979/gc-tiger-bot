@@ -1,1 +1,5 @@
-from fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get('/')\ndef read_root():\n    return {'message': 'Hello from gc-tiger-bot!'}
+from fastapi import FastAPI
+app = FastAPI()
+@app.get('/')
+def read_root():
+  return {'message': 'Hello from gc-tiger-bot!'}
